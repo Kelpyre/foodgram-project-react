@@ -1,10 +1,10 @@
 from django_filters import rest_framework as filters
 
-from foodgram.models import Recipe, Tag
+from foodgram.models import Recipe, Tag, Ingredient
 
 
 class RecipeFilter(filters.FilterSet):
-    """Кастомный фильтрсет."""
+    """Кастомный фильтрсет рецептов."""
     tags = filters.ModelMultipleChoiceFilter(
         queryset=Tag.objects.all(),
         field_name='tags__slug',
@@ -35,3 +35,14 @@ class RecipeFilter(filters.FilterSet):
     class Meta:
         model = Recipe
         fields = ('tags', 'author', 'is_favorited', 'is_in_shopping_cart',)
+
+
+class IngredientFilter(filters.FilterSet):
+    name = filters.CharFilter(
+        field_name='name',
+        lookup_expr='istartswith'
+    )
+
+    class Meta:
+        model = Ingredient
+        fields = ['name', ]

@@ -135,3 +135,9 @@ dmypy.json
 # static/
 backend/static/
 backend/media/
+
+# кастомные команды
+backend/foodgram/management
+
+# файл с данными для базы
+backend/ingredients.csv
