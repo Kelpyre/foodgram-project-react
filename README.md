@@ -1,4 +1,4 @@
-[![CI](https://github.com/Kelpyre/foodgram-project-react/actions/workflows/main.yml/badge.svg)](https://github.com/Kelpyre/foodgram-project-react/actions/workflows/main.yml)
+[![CI](https://github.com/Kelpyre/foodgram-project-react/actions/workflows/foodgram-workflow.yml/badge.svg)](https://github.com/Kelpyre/foodgram-project-react/actions/workflows/foodgram-workflow.yml)
 
 # Ссылка на тестовый проект
 
@@ -101,6 +101,7 @@ POSTGRES_PASSWORD=Qwerty123 # пароль для подключения к БД
 DB_HOST=db # название сервиса (контейнера)
 DB_PORT=5432 # порт для подключения к БД
 SECRET_KEY=* # секретный ключ
+DEBUG=* # режим для разработки, True/False
 ```
 
 ### Как запустить проект в Docker:
