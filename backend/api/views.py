@@ -1,22 +1,16 @@
+from api.serializers import (FavoriteSerializer, IngredientSerializer,
+                             RecipeSerializer, ShoppingListSerializer,
+                             TagSerializer, UserSubscriptionSerializer)
 from django.db.models import Sum
 from django.shortcuts import HttpResponse, get_object_or_404
+from foodgram.models import (Favorite, Ingredient, Recipe, RecipeIngredient,
+                             ShoppingList, Tag)
 from rest_framework import permissions, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from users.models import Subscription, User
 
-from api.serializers import (
-    FavoriteSerializer,
-    IngredientSerializer,
-    RecipeSerializer,
-    ShoppingListSerializer,
-    TagSerializer,
-    UserSubscriptionSerializer,
-)
-from foodgram.models import (
-    Favorite, Ingredient, Recipe, RecipeIngredient, ShoppingList, Tag,
-)
-from users.models import User, Subscription
-from .filters import RecipeFilter, IngredientFilter
+from .filters import IngredientFilter, RecipeFilter
 from .permissions import AuthorAdminOrReadOnly
 
 
