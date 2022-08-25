@@ -1,3 +1,5 @@
+[![CI](https://github.com/Kelpyre/foodgram-project-react/actions/workflows/main.yml/badge.svg)](https://github.com/Kelpyre/foodgram-project-react/actions/workflows/main.yml)
+
 # Ссылка на тестовый проект
 
 Проект тестово развернут на удаленном сервере, описание функционала API доступно по адресу http://130.193.40.178/redoc/ . Настроена возможность автоматического тестирования, размещения в DockerHub, деплоя и отправки оповещения через бота в Telegram. Реализовано при помощи GitHub Actions в репозитории.
@@ -15,6 +17,16 @@
 - TAGS - Тэги для рецептов.
 - RECIPES - Рецепты и возможные действия с ними.
 - INGREDIENTS - Ингредиенты для рецептов.
+
+### Технологии:
+ - Python
+ - Django
+ - Django REST Framework
+ - Redoc
+ - Docker
+ - NGINX
+ - REACT
+ - PostgreSQL
 
 ### Примеры запросов:
 

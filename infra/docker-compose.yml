@@ -14,9 +14,8 @@ services:
       - ./.env
 
   backend:
-    build:
-      context: ../backend
-      dockerfile: Dockerfile
+    image: kelpyre/foodgram-backend:latest
+    restart: always
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
@@ -26,9 +25,7 @@ services:
       - ./.env
 
   frontend:
-    build:
-      context: ../frontend
-      dockerfile: Dockerfile
+    image: kelpyre/foodgram-frontend:latest
     volumes:
       - ../frontend/:/app/result_build/
     depends_on:
