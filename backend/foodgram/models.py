@@ -111,6 +111,9 @@ class RecipeIngredient(models.Model):
         verbose_name = 'Рецепт-Ингредиент'
         verbose_name_plural = 'Рецепты-Ингредиенты'
 
+    def __str__(self):
+        return self.recipe
+
 
 class ShoppingList(models.Model):
     """Модель корзины."""
@@ -137,6 +140,9 @@ class ShoppingList(models.Model):
         verbose_name = 'Корзина'
         verbose_name_plural = 'Корзины'
 
+    def __str__(self):
+        return self.user
+
 
 class Favorite(models.Model):
     """Модель избранного."""
@@ -160,3 +166,6 @@ class Favorite(models.Model):
         ]
         verbose_name = 'Избранное'
         verbose_name_plural = 'Избранные'
+
+    def __str__(self):
+        return self.user
