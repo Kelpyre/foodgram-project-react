@@ -3,7 +3,7 @@ from rest_framework.permissions import SAFE_METHODS, BasePermission
 
 class AuthorAdminOrReadOnly(BasePermission):
     """Кастомный класс уровней доступа."""
-    message = 'Изменение или удаление чужого контента запрещено!'
+    message = 'Изменение или удаление чужого контента запрещено.'
 
     def has_permission(self, request, view):
         return (
