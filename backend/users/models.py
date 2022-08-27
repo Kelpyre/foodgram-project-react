@@ -62,4 +62,4 @@ class Subscription(models.Model):
         verbose_name_plural = 'Подписки'
 
     def __str__(self):
-        return self.user
+        return self.user.username
